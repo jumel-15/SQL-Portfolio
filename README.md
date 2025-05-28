@@ -42,12 +42,27 @@ ORDER BY
 ```
 
 2. Apple Devices with A17 Processor
-📁 File: /apple-a17-chips/apple_devices_with_a17_processor.sql
+📁 File: `/apple-a17-chips/apple_devices_with_a17_processor.sql`
 
 📌 Filters Apple devices that include A17 in their processor name, sorted by price descending.
 
 📝 Example Output:
-| Company_Name | Model_Name     | Launched_Price_USA_USD  | Launched Year |
-|--------------|----------------|-------------------------|---------------|
-| Google       | Pixel 9 128GB  | 799                     | 2024          |
-| Oppo         | A5 Pro 512GB   | 699                     | 2024          |
+| Company_Name | Model_Name             | Processor               | Launched_Price_USA_USD | Launched Year |
+|--------------|------------------------|-------------------------|------------------------|---------------|
+| Apple        | iPhone 16 512GB        | A17 Bionic              | 899                    | 2024          |
+| Apple        | iPhone 16 Pro 128GB    | A17 Pro                 | 999                    | 2024          |
+
+```sql
+SELECT 
+    Company_Name, 
+    Model_Name, 
+    Processor, 
+    Launched_Price_USA_USD, 
+    [Launched Year] 
+FROM ['Mobiles Dataset (2025)$']
+WHERE 
+    Company_Name = 'Apple'
+    AND Processor LIKE '%A17%'
+ORDER BY 
+    Launched_Price_USA_USD DESC;
+```
