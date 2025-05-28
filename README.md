@@ -19,7 +19,7 @@ A collection of SQL queries showcasing my ability to retrieve, filter, and sort 
 📁 File: `/price-filter/mobiles_under_799_usd_2024.sql`
 
 📌 Lists mobile devices launched in **2024** with a price **less than or equal to USD 799**, sorted by price descending.
- ![Mobiles Under USD 799](price-filter/sample-output.png)
+ ![mobiles_under_799_usd](price-filter/sample-output.png)
 📝 Example Output:
 | Company_Name | Model_Name     | Launched_Price_USA_USD  | Launched Year |
 |--------------|----------------|-------------------------|---------------|
