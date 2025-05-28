@@ -41,7 +41,7 @@ ORDER BY
     Company_Name ASC;
 ```
 
-2. Apple Devices with A17 Processor
+2. Apple Devices with A17 Processor  
 📁 File: `/apple-a17-chips/apple_devices_with_a17_processor.sql`
 
 📌 Filters Apple devices that include A17 in their processor name, sorted by price descending.
@@ -63,6 +63,31 @@ FROM ['Mobiles Dataset (2025)$']
 WHERE 
     Company_Name = 'Apple'
     AND Processor LIKE '%A17%'
+ORDER BY 
+    Launched_Price_USA_USD DESC;
+```
+
+3. Samsung Devices with 50MP Camera  
+📁 File: `/samsung-camera/samsung_devices_with_50mp_camera.sql`
+
+📌 Lists Samsung devices with a 50MP rear camera, sorted by price descending.
+
+📝 Example Output:
+| Company_Name | Model_Name       | Back_Camera             | Launched_Price_USA_USD |
+|--------------|------------------|-------------------------|------------------------|
+| Samsung      | Galaxy S22 128GB | 50MP                    | 699                    |
+| Samsung      | Galaxy S23 128GB | 50MP                    | 799                    |
+
+```sql
+SELECT 
+    Company_Name, 
+    Model_Name, 
+    Back_Camera, 
+    Launched_Price_USA_USD 
+FROM ['Mobiles Dataset (2025)$']
+WHERE 
+    Company_Name = 'Samsung'
+    AND Back_Camera LIKE '%50MP%'
 ORDER BY 
     Launched_Price_USA_USD DESC;
 ```
